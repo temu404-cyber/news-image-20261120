@@ -1,43 +1,46 @@
-# One image: the world's news of Friday 20 November 2026
+# The world in one image: Friday 20 November 2026
 
-Entry for the make.fun competition `news-image-20261120`.
+An entry for the make.fun competition `news-image-20261120`, which asks
+for a single image summing up the day's world news.
 
-## The image
+## What the image shows
 
-`entry.png` (1024×1024) sums up the day in six panels, each drawn from
-reporting dated 20 November 2026:
+`entry.png` (1024×1024) is a front page with six illustrated panels, each
+one drawn from reporting dated 20 November 2026:
 
-1. **Politics, Washington** — Trump pushes the Iran war decision to 2027,
+1. **Washington, politics** — Trump defers the Iran war decision to 2027,
    saying he will "see what happens" after January 1.
-2. **Weather, India** — Cyclone Akvan hits Odisha; 300,000 people evacuated
-   and 423 rescue teams deployed.
-3. **Tech, New York** — Anthropic shares close 17% higher on their first
-   day of trading on Nasdaq (ticker ANT).
-4. **Gulf, Riyadh** — a Houthi missile damages the PIF Tower, the Saudi
-   sovereign wealth fund's headquarters; no injuries reported.
-5. **Space, Japan** — engine trouble forces Japan's Hayabusa2 probe to scrap
+2. **Odisha, weather** — Cyclone Akvan makes landfall; 300,000 people are
+   evacuated and 423 rescue teams are deployed.
+3. **New York, tech** — Anthropic shares close 17% higher on their first
+   day of trading on Nasdaq, under the ticker ANT.
+4. **Riyadh, the Gulf** — a Houthi missile damages the PIF Tower, the Saudi
+   sovereign wealth fund's headquarters; no injuries are reported.
+5. **Space, Japan** — engine trouble forces the Hayabusa2 probe to scrap
    its asteroid landing and change plans.
-6. **Diplomacy, Berlin** — Europe says it is ready to negotiate with Russia,
-   but a peace deal with Ukraine must come first.
+6. **Berlin, diplomacy** — Europe says it is ready to negotiate with
+   Russia, but a peace deal with Ukraine must come first.
 
-The banner names the day the image sums up, and every panel carries a short
-label so the stories read from the image alone. Nothing in it is speculation
-presented as fact: where reporting was still developing (the Riyadh strike),
-the image says only what was confirmed that day.
+A banner names the day, and every panel carries a short label, so the
+stories can be read from the image alone. Nothing in it is speculation
+presented as fact: where reporting was still developing — the Riyadh
+strike — the image states only what was confirmed that day.
 
-## Files
+## What's in this repo
 
-- `entry.png` — the image, drawn by `draw.py`.
-- `draw.py` — Python + PIL script that renders the image (shapes and text
-  only; no photographs, no external assets).
-- `main.ts` — the entrypoint: copies `entry.png` to `/output/entry.png`
-  (or `$MAKEFUN_OUTPUT_DIR/entry.png` for local runs).
+- `entry.png` — the image itself, rendered by `draw.py`.
+- `draw.py` — the Python + PIL script that draws the image, using shapes
+  and text only; no photographs and no external assets.
+- `main.ts` — the entrypoint. It copies `entry.png` to
+  `/output/entry.png`, or to `$MAKEFUN_OUTPUT_DIR/entry.png` on a local run.
 
-## Run it
+## Running it
 
 ```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
+
+To redraw the image from scratch: `python3 draw.py`.
 
 ## License
 
